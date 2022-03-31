@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35DD4B4729E673C7C7194794 /* Pods_RoveSoApple_RoveSoAppleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2F719B296A6E26FB3145D0 /* Pods_RoveSoApple_RoveSoAppleUITests.framework */; };
+		4F5416CB47177D89E9E15BCF /* Pods_RoveSoAppleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB9956F5975BCCD22072751 /* Pods_RoveSoAppleTests.framework */; };
+		7D4A04264D518729AC5EAB11 /* Pods_RoveSoApple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B90BF9F529647416BA6FFC2 /* Pods_RoveSoApple.framework */; };
 		A6C5C55F27F4D7CB00243DBB /* LightingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5C55E27F4D7CB00243DBB /* LightingView.swift */; };
 		A6C5C56127F4D7D900243DBB /* DrivingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5C56027F4D7D900243DBB /* DrivingView.swift */; };
 		A6C5C56327F4D80700243DBB /* EStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5C56227F4D80700243DBB /* EStopView.swift */; };
@@ -40,6 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B90BF9F529647416BA6FFC2 /* Pods_RoveSoApple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoveSoApple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E967D4E50BDBE53EABE95F5 /* Pods-RoveSoApple-RoveSoAppleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoveSoApple-RoveSoAppleUITests.release.xcconfig"; path = "Target Support Files/Pods-RoveSoApple-RoveSoAppleUITests/Pods-RoveSoApple-RoveSoAppleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1F7381BD316CFC9AF016E4BF /* Pods-RoveSoApple-RoveSoAppleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoveSoApple-RoveSoAppleUITests.debug.xcconfig"; path = "Target Support Files/Pods-RoveSoApple-RoveSoAppleUITests/Pods-RoveSoApple-RoveSoAppleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4694C58F88F9975D22635D8F /* Pods-RoveSoApple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoveSoApple.debug.xcconfig"; path = "Target Support Files/Pods-RoveSoApple/Pods-RoveSoApple.debug.xcconfig"; sourceTree = "<group>"; };
+		6265CB480EE342272D4FDB6F /* Pods-RoveSoAppleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoveSoAppleTests.release.xcconfig"; path = "Target Support Files/Pods-RoveSoAppleTests/Pods-RoveSoAppleTests.release.xcconfig"; sourceTree = "<group>"; };
+		6FB9956F5975BCCD22072751 /* Pods_RoveSoAppleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoveSoAppleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C5C55E27F4D7CB00243DBB /* LightingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightingView.swift; sourceTree = "<group>"; };
 		A6C5C56027F4D7D900243DBB /* DrivingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingView.swift; sourceTree = "<group>"; };
 		A6C5C56227F4D80700243DBB /* EStopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EStopView.swift; sourceTree = "<group>"; };
@@ -57,6 +66,9 @@
 		A6CA2FA827F4C725009BF5E2 /* RoveSoAppleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoveSoAppleUITests.swift; sourceTree = "<group>"; };
 		A6CA2FAA27F4C725009BF5E2 /* RoveSoAppleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoveSoAppleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A6ED19B227F4EE6C00933793 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AA2F719B296A6E26FB3145D0 /* Pods_RoveSoApple_RoveSoAppleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoveSoApple_RoveSoAppleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBE1A6E4DDD598FAB2750DF1 /* Pods-RoveSoApple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoveSoApple.release.xcconfig"; path = "Target Support Files/Pods-RoveSoApple/Pods-RoveSoApple.release.xcconfig"; sourceTree = "<group>"; };
+		E79F163DEBED51AE78E9D24B /* Pods-RoveSoAppleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoveSoAppleTests.debug.xcconfig"; path = "Target Support Files/Pods-RoveSoAppleTests/Pods-RoveSoAppleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D4A04264D518729AC5EAB11 /* Pods_RoveSoApple.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F5416CB47177D89E9E15BCF /* Pods_RoveSoAppleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +92,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35DD4B4729E673C7C7194794 /* Pods_RoveSoApple_RoveSoAppleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36C8F5A79A8C429FDAACB3C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B90BF9F529647416BA6FFC2 /* Pods_RoveSoApple.framework */,
+				AA2F719B296A6E26FB3145D0 /* Pods_RoveSoApple_RoveSoAppleUITests.framework */,
+				6FB9956F5975BCCD22072751 /* Pods_RoveSoAppleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A08000271D592063BC83FC00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4694C58F88F9975D22635D8F /* Pods-RoveSoApple.debug.xcconfig */,
+				CBE1A6E4DDD598FAB2750DF1 /* Pods-RoveSoApple.release.xcconfig */,
+				1F7381BD316CFC9AF016E4BF /* Pods-RoveSoApple-RoveSoAppleUITests.debug.xcconfig */,
+				0E967D4E50BDBE53EABE95F5 /* Pods-RoveSoApple-RoveSoAppleUITests.release.xcconfig */,
+				E79F163DEBED51AE78E9D24B /* Pods-RoveSoAppleTests.debug.xcconfig */,
+				6265CB480EE342272D4FDB6F /* Pods-RoveSoAppleTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A6C5C55D27F4D75500243DBB /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +142,8 @@
 				A6CA2F9D27F4C725009BF5E2 /* RoveSoAppleTests */,
 				A6CA2FA727F4C725009BF5E2 /* RoveSoAppleUITests */,
 				A6CA2F8B27F4C721009BF5E2 /* Products */,
+				A08000271D592063BC83FC00 /* Pods */,
+				36C8F5A79A8C429FDAACB3C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6CA2FAE27F4C725009BF5E2 /* Build configuration list for PBXNativeTarget "RoveSoApple" */;
 			buildPhases = (
+				88B21165852E527F2F2C5D7F /* [CP] Check Pods Manifest.lock */,
 				A6CA2F8627F4C721009BF5E2 /* Sources */,
 				A6CA2F8727F4C721009BF5E2 /* Frameworks */,
 				A6CA2F8827F4C721009BF5E2 /* Resources */,
+				D209AEDDF5749D4A662487DC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,6 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6CA2FB127F4C725009BF5E2 /* Build configuration list for PBXNativeTarget "RoveSoAppleTests" */;
 			buildPhases = (
+				2618BAB6C5F0D89A48A643FD /* [CP] Check Pods Manifest.lock */,
 				A6CA2F9627F4C725009BF5E2 /* Sources */,
 				A6CA2F9727F4C725009BF5E2 /* Frameworks */,
 				A6CA2F9827F4C725009BF5E2 /* Resources */,
@@ -197,9 +241,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6CA2FB427F4C725009BF5E2 /* Build configuration list for PBXNativeTarget "RoveSoAppleUITests" */;
 			buildPhases = (
+				25E602804F22F67E36282001 /* [CP] Check Pods Manifest.lock */,
 				A6CA2FA027F4C725009BF5E2 /* Sources */,
 				A6CA2FA127F4C725009BF5E2 /* Frameworks */,
 				A6CA2FA227F4C725009BF5E2 /* Resources */,
+				00D1803622233838F7298918 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -279,6 +325,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00D1803622233838F7298918 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RoveSoApple-RoveSoAppleUITests/Pods-RoveSoApple-RoveSoAppleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RoveSoApple-RoveSoAppleUITests/Pods-RoveSoApple-RoveSoAppleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RoveSoApple-RoveSoAppleUITests/Pods-RoveSoApple-RoveSoAppleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25E602804F22F67E36282001 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RoveSoApple-RoveSoAppleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2618BAB6C5F0D89A48A643FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RoveSoAppleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88B21165852E527F2F2C5D7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RoveSoApple-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D209AEDDF5749D4A662487DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RoveSoApple/Pods-RoveSoApple-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RoveSoApple/Pods-RoveSoApple-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RoveSoApple/Pods-RoveSoApple-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A6CA2F8627F4C721009BF5E2 /* Sources */ = {
@@ -445,6 +594,7 @@
 		};
 		A6CA2FAF27F4C725009BF5E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4694C58F88F9975D22635D8F /* Pods-RoveSoApple.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,6 +625,7 @@
 		};
 		A6CA2FB027F4C725009BF5E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBE1A6E4DDD598FAB2750DF1 /* Pods-RoveSoApple.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -505,6 +656,7 @@
 		};
 		A6CA2FB227F4C725009BF5E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E79F163DEBED51AE78E9D24B /* Pods-RoveSoAppleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -525,6 +677,7 @@
 		};
 		A6CA2FB327F4C725009BF5E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6265CB480EE342272D4FDB6F /* Pods-RoveSoAppleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -545,6 +698,7 @@
 		};
 		A6CA2FB527F4C725009BF5E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F7381BD316CFC9AF016E4BF /* Pods-RoveSoApple-RoveSoAppleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -563,6 +717,7 @@
 		};
 		A6CA2FB627F4C725009BF5E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E967D4E50BDBE53EABE95F5 /* Pods-RoveSoApple-RoveSoAppleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
