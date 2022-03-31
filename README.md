@@ -8,6 +8,8 @@ There are a few steps to get started editing, RoveSoApple
 `sudo gem install cocoapods`
 3. Install required packages in the RoveSoApple directory
 `pod install`
+4. Open the xcworkspace file
+`RoveSoApple/RoveSoApple.xcworkspace`
 
 ## Recommended Tools
 Xcode
