@@ -2,20 +2,12 @@ name: iOS starter workflow
 
 on:
   push:
-    branches:
-      - '*'
-      - '*/*'
-      - '**'
-    branches-ignore:
-      - 'release'
-      - 'dev'
+    branches: [ "*", "*/", "**" ]
+    branches-ignore: [ "release", "dev" ]
   pull_request:
     branches: [ "release", "dev" ]
   workflow_dispatch:
-    branches:
-      - '*'
-      - '*/*'
-      - '**'
+    branches: [ "*", "*/", "**" ]
 
 jobs:
   build:
