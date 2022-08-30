@@ -1,4 +1,4 @@
-# RoveSoApple
+# RoveSoRemote
 This repo contains the iOS Source Code for RoveSoRemote, aka RoveSoApple, for the current iteration of the MRDT Rover designed to compete at the University Rover Challenge. The app is developed to run on iPhones running iOS 15.4 or newer. 
 ## Getting Setup
 There are a few steps to get started editing, RoveSoApple
@@ -13,3 +13,4 @@ There are a few steps to get started editing, RoveSoApple
 
 ## Recommended Tools
 Xcode
+AppCode
