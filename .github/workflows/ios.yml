@@ -10,7 +10,7 @@ on:
 
 defaults:
   run:
-    working-directory: RoveSoApple
+    working-directory: RoveSoApple/RoveSoApple
 
 jobs:
   build:
