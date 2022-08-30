@@ -8,6 +8,10 @@ on:
   workflow_dispatch:
     branches: [ "*", "*/", "**" ]
 
+defaults:
+  run:
+    working-directory: RoveSoApple
+
 jobs:
   build:
     name: Build and Test
