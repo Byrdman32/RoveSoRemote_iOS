@@ -75,7 +75,7 @@ struct DrivingView: View {
                                                                 data_id: UInt16(1000),
                                                                 data_count: UInt16(2),
                                                                 data_type: UInt8(DataTypes.uInt16.rawValue))
-                    sendUDP(ipAddresses[0], 11000, header, data)
+                    sendUDP(ipAddresses[0], 11004, header, data)
                 }
             }
             .navigationTitle("Driving")

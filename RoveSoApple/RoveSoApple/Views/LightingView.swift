@@ -46,7 +46,7 @@ struct LightingView: View {
                                                                     data_id: UInt16(7002),
                                                                     data_count: UInt16(1),
                                                                     data_type: UInt8(DataTypes.uInt8.rawValue))
-                        sendUDP(ipAddresses[0], 11000, header, [data])
+                        sendUDP(ipAddresses[0], 11010, header, [data])
                     }
                     .buttonStyle(.bordered)
                     .padding(50)

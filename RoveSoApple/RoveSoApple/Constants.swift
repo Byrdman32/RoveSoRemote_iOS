@@ -8,8 +8,9 @@
 import Foundation
 // Settings View
 let maxDrivePower: Int16 = 1000
+let maxRestartTime: UInt8 = 20
 let defaultDrivePower: Int16 = 300
-let defaultRestartTime: Double = 0
+let defaultRestartTime: UInt8 = 0
 let RoveComm_Version: UInt8 = 25
 
 let ipAddresses: [String] = ["218", "26"]

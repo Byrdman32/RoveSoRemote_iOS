@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var drivePower: Int16 = defaultDrivePower
-    @State private var restartTime: Double = defaultRestartTime
+    @State private var restartTime: UInt8 = defaultRestartTime
     
     var body: some View {
         TabView {
@@ -24,7 +24,7 @@ struct ContentView: View {
                     Image(systemName: "bicycle")
                     Text("Driving")
                 }
-            EStopView()
+            EStopView(restartTime: $restartTime)
                 .tabItem {
                     Image(systemName: "square.fill")
                     Text("EStop")

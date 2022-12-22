@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EStopView: View {
     
+    @Binding var restartTime: UInt8
     @State var didPress: Bool = false
     @State var pressed: Bool = false
     
@@ -18,7 +19,7 @@ struct EStopView: View {
                 Text("STOP")
                     .font(.system(size: 65, weight: .bold))
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(didPress ? .red : .green)
+                    .background(didPress ? .red : .red)
                     .cornerRadius(25)
             }
             .navigationTitle("Emergency Stop")
@@ -29,16 +30,18 @@ struct EStopView: View {
                     message: Text("The EStop has been activated from this device.")
                 )
             }
-            .onLongPressGesture(pressing: { pressing in
+            .onTapGesture {
+                let data: UInt8 = restartTime
+                let header: RoveCommHeader = RoveCommHeader(version: RoveComm_Version,
+                                                            data_id: UInt16(2000),
+                                                            data_count: UInt16(1),
+                                                            data_type: UInt8(DataTypes.uInt8.rawValue))
+                sendUDP(ipAddresses[0], 11003, header, [data])
+                
                 withAnimation(.easeInOut(duration: 0.25)) {
-                    self.didPress = pressing
+                    pressed = true
                 }
-                if pressing {
-                    self.pressed = pressing
-                }
-            }, perform: {
-//                sendRoveCommPacket(Octet4: "98", Port: 11000)
-            })
+            }
         }
     }
 }
