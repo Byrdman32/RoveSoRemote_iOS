@@ -7,6 +7,7 @@
 
 import Foundation
 // Settings View
+let maxDrivePower: Double = 1000
 let defaultDrivePower: Double = 300
 let defaultRestartTime: Double = 0
 let RoveComm_Version: UInt8 = 25
@@ -32,10 +33,75 @@ struct RoveCommHeader {
     var data_type: UInt8
 }
 
+extension Int16 {
+    var twoBytes : [Int8] {
+        return [Int8(truncatingIfNeeded: self >> 8),
+                Int8(truncatingIfNeeded: self)]
+    }
+}
+
 extension UInt16 {
     var twoBytes : [UInt8] {
-        let unsignedSelf = UInt16(bitPattern: Int16(self))
-        return [UInt8(truncatingIfNeeded: unsignedSelf >> 8),
-                UInt8(truncatingIfNeeded: unsignedSelf)]
+        return [UInt8(truncatingIfNeeded: self >> 8),
+                UInt8(truncatingIfNeeded: self)]
+    }
+}
+
+extension Int32 {
+    var fourBytes : [Int8] {
+        return [Int8(truncatingIfNeeded: self >> 24),
+                Int8(truncatingIfNeeded: self >> 16),
+                Int8(truncatingIfNeeded: self >> 8),
+                Int8(truncatingIfNeeded: self)]
+    }
+}
+
+extension UInt32 {
+    var fourBytes : [UInt8] {
+        return [UInt8(truncatingIfNeeded: self >> 24),
+                UInt8(truncatingIfNeeded: self >> 16),
+                UInt8(truncatingIfNeeded: self >> 8),
+                UInt8(truncatingIfNeeded: self)]
+    }
+}
+
+extension Data {
+
+    init<T>(from value: T) {
+        var value = value
+        var myData = Data()
+        withUnsafePointer(to:&value, { (ptr: UnsafePointer<T>) -> Void in
+            myData = Data( buffer: UnsafeBufferPointer(start: ptr, count: 1))
+        })
+        self.init(myData)
+    }
+
+    func toArray<T>(type: T.Type) -> [T] {
+        return self.withUnsafeBytes {
+            [T](UnsafeBufferPointer(start: $0, count: self.count/MemoryLayout<T>.stride))
+        }
+    }
+}
+
+import SwiftUI
+
+extension SwiftUI.Color {
+    func toRGB() -> [UInt8]? {
+        let uic = UIColor(self)
+        guard let components = uic.cgColor.components, components.count >= 3 else {
+            return nil
+        }
+        var r = Float(components[0]) * 255
+        var g = Float(components[1]) * 255
+        var b = Float(components[2]) * 255
+        var a = Float(1.0)
+        
+        let colorData: [UInt8] = [UInt8(round(r)), UInt8(round(g)), UInt8(round(b))]
+
+        if components.count >= 4 {
+            a = Float(components[3])
+        }
+        
+        return colorData
     }
 }
