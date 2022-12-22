@@ -74,7 +74,7 @@ struct DrivingView: View {
                     let header: RoveCommHeader = RoveCommHeader(version: RoveComm_Version,
                                                                 data_id: UInt16(1000),
                                                                 data_count: UInt16(2),
-                                                                data_type: UInt8(DataTypes.uInt16.rawValue))
+                                                                data_type: UInt8(DataTypes.Int16.rawValue))
                     sendUDP(ipAddresses[0], 11004, header, data)
                 }
             }
