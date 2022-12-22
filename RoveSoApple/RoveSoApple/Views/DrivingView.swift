@@ -5,34 +5,86 @@
 //  Created by Eli Byrd on 3/30/22.
 //
 
+import Sliders
 import SwiftUI
-import OMJoystick
-import SFSafeSymbols
 
 struct DrivingView: View {
     
-    let iconSetting = IconSetting(
-        leftIcon: Image(systemSymbol: .arrowLeft),
-        rightIcon: Image(systemSymbol: .arrowRight),
-        upIcon: Image(systemSymbol: .arrowUp),
-        downIcon: Image(systemSymbol: .arrowDown)
-    )
-    
-    let colorSetting = ColorSetting(subRingColor: .red, bigRingNormalBackgroundColor: .green, bigRingDarkBackgroundColor: .blue, bigRingStrokeColor: .yellow)
+    @Binding var drivePower: Int16
+    @State var left: Int16 = 0
+    @State var right: Int16 = 0
+    @State private var timer = Timer.publish(every: 1, on: .current, in: .common).autoconnect()
     
     var body: some View {
         NavigationView {
             ZStack {
                 HStack {
-                    OMJoystick(isDebug: false, iconSetting: self.iconSetting, colorSetting: ColorSetting(), smallRingRadius: 30, bigRingRadius: 70) {
-                        (JoyStickState, stickPosition) in
-                    }
-                    OMJoystick(isDebug: false, iconSetting: self.iconSetting, colorSetting: ColorSetting(), smallRingRadius: 30, bigRingRadius: 70) {
-                        (JoyStickState, stickPosition) in
-                    }
+                    ValueSlider(value: $left, in: (drivePower * -1) ... drivePower, onEditingChanged: {_ in
+                        left = 0
+                    })
+                        .valueSliderStyle(
+                            VerticalValueSliderStyle(
+                                track: LinearGradient(
+                                    gradient: Gradient(colors: [.red, .gray, .red]),
+                                    startPoint: .bottom, endPoint: .top
+                                )
+                                .frame(width: 6)
+                                .cornerRadius(3),
+                                thumbSize: CGSize(width: 48, height: 32),
+                                options: .interactiveTrack
+                            )
+                        )
+                        .padding(.top, 15)
+                        .padding(.bottom, 10)
+                        .simultaneousGesture(
+                            DragGesture(minimumDistance: 0)
+                                .onEnded { gesture in
+                                    right = 0
+                                }
+                        )
+                    
+                    Spacer()
+                    
+                    ValueSlider(value: $right, in: (drivePower * -1) ... drivePower, onEditingChanged: {_ in
+                        
+                    })
+                        .valueSliderStyle(
+                            VerticalValueSliderStyle(
+                                track: LinearGradient(
+                                    gradient: Gradient(colors: [.red, .gray, .red]),
+                                    startPoint: .bottom, endPoint: .top
+                                )
+                                .frame(width: 6)
+                                .cornerRadius(3),
+                                thumbSize: CGSize(width: 48, height: 32),
+                                options: .interactiveTrack
+                            )
+                        )
+                        .padding(.top, 15)
+                        .padding(.bottom, 10)
+                        .simultaneousGesture(
+                            DragGesture(minimumDistance: 0)
+                                .onEnded { gesture in
+                                    right = 0
+                                }
+                        )
+                }
+                .onReceive(timer) { _ in
+                    let data: [Int16] = [left, right]
+                    let header: RoveCommHeader = RoveCommHeader(version: RoveComm_Version,
+                                                                data_id: UInt16(1000),
+                                                                data_count: UInt16(2),
+                                                                data_type: UInt8(DataTypes.uInt16.rawValue))
+                    sendUDP(ipAddresses[0], 11000, header, data)
                 }
             }
             .navigationTitle("Driving")
+            .onAppear() {
+                self.timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+            }
+            .onDisappear() {
+                self.timer.upstream.connect().cancel()
+            }
         }
     }
 }

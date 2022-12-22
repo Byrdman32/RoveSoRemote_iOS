@@ -5,21 +5,34 @@
 //  Created by Eli Byrd on 3/30/22.
 //
 
+import Sliders
 import SwiftUI
 
 struct SettingsView: View {
     
-    @State private var drivePower: Double = defaultDrivePower
-    @State private var restartTime: Double = defaultRestartTime
+    @Binding var drivePower: Int16
+    @Binding var restartTime: Double
     @State private var showingAlert = false
+    
+    @State var score: Int = Int(defaultDrivePower)
+    var intProxy: Binding<Double>{
+        Binding<Double>(get: {
+            return Double(score)
+        }, set: {
+            score = Int($0)
+        })
+    }
     
     var body: some View {
         NavigationView {
             VStack {
                 VStack {
                     Text("Drive Power")
-                    Slider(value: $drivePower, in: 0...1000, step: 1)
-                    Text(String(format: "%.0f", drivePower))
+                    Slider(value: intProxy , in: 0...1000, step: 1.0, onEditingChanged: {_ in
+                        drivePower = Int16(score.description) ?? 0
+                    })
+                    
+                    Text(score.description)
                 }
                 
                 VStack {
@@ -53,11 +66,5 @@ struct SettingsView: View {
                 }
             }
         }
-    }
-}
-
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsView()
     }
 }

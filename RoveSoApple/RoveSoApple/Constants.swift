@@ -7,8 +7,8 @@
 
 import Foundation
 // Settings View
-let maxDrivePower: Double = 1000
-let defaultDrivePower: Double = 300
+let maxDrivePower: Int16 = 1000
+let defaultDrivePower: Int16 = 300
 let defaultRestartTime: Double = 0
 let RoveComm_Version: UInt8 = 25
 
@@ -103,5 +103,15 @@ extension SwiftUI.Color {
         }
         
         return colorData
+    }
+}
+
+extension Double {
+    func toInt16() -> Int16? {
+        if self >= Double(Int16.min) && self < Double(Int16.max) {
+            return Int16(self)
+        } else {
+            return 0
+        }
     }
 }
