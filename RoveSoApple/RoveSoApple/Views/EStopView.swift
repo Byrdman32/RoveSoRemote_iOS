@@ -37,7 +37,7 @@ struct EStopView: View {
                     self.pressed = pressing
                 }
             }, perform: {
-                sendRoveCommPacket(Octet4: "98", Port: 11000)
+//                sendRoveCommPacket(Octet4: "98", Port: 11000)
             })
         }
     }

@@ -1,0 +1,20 @@
+PODS:
+  - OMJoystick (0.6.0)
+  - SFSafeSymbols (2.1.3)
+
+DEPENDENCIES:
+  - OMJoystick
+  - SFSafeSymbols
+
+SPEC REPOS:
+  trunk:
+    - OMJoystick
+    - SFSafeSymbols
+
+SPEC CHECKSUMS:
+  OMJoystick: 8d189700d9d2fbadc6706537710524511243ca86
+  SFSafeSymbols: 1c2d431b9e5ed20cd92a4ac303427f780d3354a3
+
+PODFILE CHECKSUM: 6e96b9c236b5599f09a93a54bc6db5fe7f90a38b
+
+COCOAPODS: 1.11.3

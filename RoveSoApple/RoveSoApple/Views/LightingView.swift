@@ -30,7 +30,15 @@ struct LightingView: View {
                     }
                     Spacer()
                     Button("Send") {
-                        print ("\(selectedState)")
+                        
+                        let data: [UInt8] = [15, 7]
+                        
+                        let header: RoveCommHeader = RoveCommHeader(version: RoveComm_Version,
+                                                                     data_id: UInt16(11003),
+                                                                     data_count: UInt16(2),
+                                                                     data_type: UInt8(DataTypes.uInt8.rawValue))
+                        
+                        sendUDP(ipAddresses[0], 11000, header, data)
                     }
                     .buttonStyle(.bordered)
                     .padding(50)

@@ -10,6 +10,8 @@
 		35DD4B4729E673C7C7194794 /* Pods_RoveSoApple_RoveSoAppleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2F719B296A6E26FB3145D0 /* Pods_RoveSoApple_RoveSoAppleUITests.framework */; };
 		4F5416CB47177D89E9E15BCF /* Pods_RoveSoAppleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB9956F5975BCCD22072751 /* Pods_RoveSoAppleTests.framework */; };
 		7D4A04264D518729AC5EAB11 /* Pods_RoveSoApple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B90BF9F529647416BA6FFC2 /* Pods_RoveSoApple.framework */; };
+		A615B9B62953644600333F17 /* RoveCommPacket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A615B9B42953644600333F17 /* RoveCommPacket.cpp */; };
+		A615B9B92953656600333F17 /* RoveCommPacketWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = A615B9B82953656600333F17 /* RoveCommPacketWrapper.mm */; };
 		A6C5C55F27F4D7CB00243DBB /* LightingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5C55E27F4D7CB00243DBB /* LightingView.swift */; };
 		A6C5C56127F4D7D900243DBB /* DrivingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5C56027F4D7D900243DBB /* DrivingView.swift */; };
 		A6C5C56327F4D80700243DBB /* EStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5C56227F4D80700243DBB /* EStopView.swift */; };
@@ -51,6 +53,12 @@
 		4694C58F88F9975D22635D8F /* Pods-RoveSoApple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoveSoApple.debug.xcconfig"; path = "Target Support Files/Pods-RoveSoApple/Pods-RoveSoApple.debug.xcconfig"; sourceTree = "<group>"; };
 		6265CB480EE342272D4FDB6F /* Pods-RoveSoAppleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoveSoAppleTests.release.xcconfig"; path = "Target Support Files/Pods-RoveSoAppleTests/Pods-RoveSoAppleTests.release.xcconfig"; sourceTree = "<group>"; };
 		6FB9956F5975BCCD22072751 /* Pods_RoveSoAppleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoveSoAppleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A615B9B32953644600333F17 /* RoveSoApple-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RoveSoApple-Bridging-Header.h"; sourceTree = "<group>"; };
+		A615B9B42953644600333F17 /* RoveCommPacket.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RoveCommPacket.cpp; sourceTree = "<group>"; };
+		A615B9B52953644600333F17 /* RoveCommPacket.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RoveCommPacket.hpp; sourceTree = "<group>"; };
+		A615B9B7295364F800333F17 /* RoveCommPacketWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoveCommPacketWrapper.h; sourceTree = "<group>"; };
+		A615B9B82953656600333F17 /* RoveCommPacketWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RoveCommPacketWrapper.mm; sourceTree = "<group>"; };
+		A615B9BA2953788100333F17 /* RoveCommManifest.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RoveCommManifest.hpp; sourceTree = "<group>"; };
 		A6C5C55E27F4D7CB00243DBB /* LightingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightingView.swift; sourceTree = "<group>"; };
 		A6C5C56027F4D7D900243DBB /* DrivingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingView.swift; sourceTree = "<group>"; };
 		A6C5C56227F4D80700243DBB /* EStopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EStopView.swift; sourceTree = "<group>"; };
@@ -126,6 +134,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A615B9B2295363BA00333F17 /* RoveComm */ = {
+			isa = PBXGroup;
+			children = (
+				A615B9B42953644600333F17 /* RoveCommPacket.cpp */,
+				A615B9B52953644600333F17 /* RoveCommPacket.hpp */,
+				A615B9BA2953788100333F17 /* RoveCommManifest.hpp */,
+				A615B9B32953644600333F17 /* RoveSoApple-Bridging-Header.h */,
+				A615B9B7295364F800333F17 /* RoveCommPacketWrapper.h */,
+				A615B9B82953656600333F17 /* RoveCommPacketWrapper.mm */,
+			);
+			path = RoveComm;
+			sourceTree = "<group>";
+		};
 		A6C5C55D27F4D75500243DBB /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +184,7 @@
 		A6CA2F8C27F4C721009BF5E2 /* RoveSoApple */ = {
 			isa = PBXGroup;
 			children = (
+				A615B9B2295363BA00333F17 /* RoveComm */,
 				A6C5C56A27F4DF1C00243DBB /* Info.plist */,
 				A6C5C55D27F4D75500243DBB /* Views */,
 				A6CA2F8D27F4C721009BF5E2 /* RoveSoAppleApp.swift */,
@@ -274,6 +296,7 @@
 				TargetAttributes = {
 					A6CA2F8927F4C721009BF5E2 = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1420;
 					};
 					A6CA2F9927F4C725009BF5E2 = {
 						CreatedOnToolsVersion = 13.3;
@@ -446,9 +469,11 @@
 				A6C5C56127F4D7D900243DBB /* DrivingView.swift in Sources */,
 				A6C5C56327F4D80700243DBB /* EStopView.swift in Sources */,
 				A6C5C56527F4D81400243DBB /* AutonomyView.swift in Sources */,
+				A615B9B92953656600333F17 /* RoveCommPacketWrapper.mm in Sources */,
 				A6E2F41C27F72DCC000987C7 /* Socket_Handler.swift in Sources */,
 				A6C5C55F27F4D7CB00243DBB /* LightingView.swift in Sources */,
 				A6ED19B327F4EE6C00933793 /* Constants.swift in Sources */,
+				A615B9B62953644600333F17 /* RoveCommPacket.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +630,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RoveSoApple/Preview Content\"";
@@ -625,6 +651,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ByrdnestStudios.RoveSoApple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RoveSoApple/RoveComm/RoveSoApple-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -636,6 +664,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RoveSoApple/Preview Content\"";
@@ -656,6 +685,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ByrdnestStudios.RoveSoApple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RoveSoApple/RoveComm/RoveSoApple-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
