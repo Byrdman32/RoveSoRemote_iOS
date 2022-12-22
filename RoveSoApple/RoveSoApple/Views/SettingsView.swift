@@ -5,27 +5,56 @@
 //  Created by Eli Byrd on 3/30/22.
 //
 
+import Sliders
 import SwiftUI
 
 struct SettingsView: View {
     
-    @State private var drivePower: Double = defaultDrivePower
-    @State private var restartTime: Double = defaultRestartTime
+    @Binding var debugMode: Bool
+    @Binding var debugIP: String
+    @Binding var drivePower: Int16
+    @Binding var restartTime: UInt8
+    
     @State private var showingAlert = false
+    @State private var showingDebug = false
+    
+    @State var drive: Int = Int(defaultDrivePower)
+    var driveProxy: Binding<Double>{
+        Binding<Double>(get: {
+            return Double(drive)
+        }, set: {
+            drive = Int($0)
+        })
+    }
+    
+    @State var restart: Int = Int(defaultRestartTime)
+    var restartProxy: Binding<Double>{
+        Binding<Double>(get: {
+            return Double(restart)
+        }, set: {
+            restart = Int($0)
+        })
+    }
     
     var body: some View {
         NavigationView {
             VStack {
                 VStack {
                     Text("Drive Power")
-                    Slider(value: $drivePower, in: 0...1000, step: 1)
-                    Text(String(format: "%.0f", drivePower))
+                    Slider(value: driveProxy , in: 0...1000, step: 1.0, onEditingChanged: {_ in
+                        drivePower = Int16(drive.description) ?? 0
+                    })
+                    
+                    Text(drive.description)
                 }
                 
                 VStack {
                     Text("Restart Time")
-                    Slider(value: $restartTime, in: 0...20, step: 1)
-                    Text(String(format: "%.0f", restartTime))
+                    Slider(value: restartProxy , in: 0...20, step: 1.0, onEditingChanged: {_ in
+                        restartTime = UInt8(drive.description) ?? 0
+                    })
+                    
+                    Text(restart.description)
                 }
             }
             .navigationTitle("Settings")
@@ -51,13 +80,14 @@ struct SettingsView: View {
                         showingAlert = false
                     }
                 }
+                
+                Button("Debug") {
+                    showingDebug.toggle()
+                }
+                .sheet(isPresented: $showingDebug) {
+                    DebugView(debugMode: $debugMode, debugIP: $debugIP)
+                }
             }
         }
-    }
-}
-
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsView()
     }
 }

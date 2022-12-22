@@ -10,6 +10,15 @@
 		35DD4B4729E673C7C7194794 /* Pods_RoveSoApple_RoveSoAppleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2F719B296A6E26FB3145D0 /* Pods_RoveSoApple_RoveSoAppleUITests.framework */; };
 		4F5416CB47177D89E9E15BCF /* Pods_RoveSoAppleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB9956F5975BCCD22072751 /* Pods_RoveSoAppleTests.framework */; };
 		7D4A04264D518729AC5EAB11 /* Pods_RoveSoApple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B90BF9F529647416BA6FFC2 /* Pods_RoveSoApple.framework */; };
+		A615B9BE2954398600333F17 /* Sliders in Frameworks */ = {isa = PBXBuildFile; productRef = A615B9BD2954398600333F17 /* Sliders */; };
+		A69BC4482954E1B800B63D28 /* Int16.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69BC4472954E1B800B63D28 /* Int16.swift */; };
+		A69BC44A2954E1D900B63D28 /* UInt16.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69BC4492954E1D900B63D28 /* UInt16.swift */; };
+		A69BC44C2954E1F400B63D28 /* Int32.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69BC44B2954E1F400B63D28 /* Int32.swift */; };
+		A69BC44E2954E20600B63D28 /* UInt32.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69BC44D2954E20600B63D28 /* UInt32.swift */; };
+		A69BC4502954E21900B63D28 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69BC44F2954E21900B63D28 /* Data.swift */; };
+		A69BC4522954E22D00B63D28 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69BC4512954E22D00B63D28 /* Color.swift */; };
+		A69BC4542954E4CB00B63D28 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69BC4532954E4CB00B63D28 /* DebugView.swift */; };
+		A69BC4562954F4E000B63D28 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69BC4552954F4E000B63D28 /* View.swift */; };
 		A6C5C55F27F4D7CB00243DBB /* LightingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5C55E27F4D7CB00243DBB /* LightingView.swift */; };
 		A6C5C56127F4D7D900243DBB /* DrivingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5C56027F4D7D900243DBB /* DrivingView.swift */; };
 		A6C5C56327F4D80700243DBB /* EStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5C56227F4D80700243DBB /* EStopView.swift */; };
@@ -22,6 +31,8 @@
 		A6CA2F9F27F4C725009BF5E2 /* RoveSoAppleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CA2F9E27F4C725009BF5E2 /* RoveSoAppleTests.swift */; };
 		A6CA2FA927F4C725009BF5E2 /* RoveSoAppleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CA2FA827F4C725009BF5E2 /* RoveSoAppleUITests.swift */; };
 		A6CA2FAB27F4C725009BF5E2 /* RoveSoAppleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CA2FAA27F4C725009BF5E2 /* RoveSoAppleUITestsLaunchTests.swift */; };
+		A6E2F41C27F72DCC000987C7 /* Socket_Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E2F41B27F72DCC000987C7 /* Socket_Handler.swift */; };
+		A6E2F41E27F73A69000987C7 /* Packet_Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E2F41D27F73A69000987C7 /* Packet_Sender.swift */; };
 		A6ED19B327F4EE6C00933793 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ED19B227F4EE6C00933793 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +60,14 @@
 		4694C58F88F9975D22635D8F /* Pods-RoveSoApple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoveSoApple.debug.xcconfig"; path = "Target Support Files/Pods-RoveSoApple/Pods-RoveSoApple.debug.xcconfig"; sourceTree = "<group>"; };
 		6265CB480EE342272D4FDB6F /* Pods-RoveSoAppleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoveSoAppleTests.release.xcconfig"; path = "Target Support Files/Pods-RoveSoAppleTests/Pods-RoveSoAppleTests.release.xcconfig"; sourceTree = "<group>"; };
 		6FB9956F5975BCCD22072751 /* Pods_RoveSoAppleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoveSoAppleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A69BC4472954E1B800B63D28 /* Int16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int16.swift; sourceTree = "<group>"; };
+		A69BC4492954E1D900B63D28 /* UInt16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UInt16.swift; sourceTree = "<group>"; };
+		A69BC44B2954E1F400B63D28 /* Int32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int32.swift; sourceTree = "<group>"; };
+		A69BC44D2954E20600B63D28 /* UInt32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UInt32.swift; sourceTree = "<group>"; };
+		A69BC44F2954E21900B63D28 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		A69BC4512954E22D00B63D28 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		A69BC4532954E4CB00B63D28 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
+		A69BC4552954F4E000B63D28 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		A6C5C55E27F4D7CB00243DBB /* LightingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightingView.swift; sourceTree = "<group>"; };
 		A6C5C56027F4D7D900243DBB /* DrivingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingView.swift; sourceTree = "<group>"; };
 		A6C5C56227F4D80700243DBB /* EStopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EStopView.swift; sourceTree = "<group>"; };
@@ -65,6 +84,8 @@
 		A6CA2FA427F4C725009BF5E2 /* RoveSoAppleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoveSoAppleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CA2FA827F4C725009BF5E2 /* RoveSoAppleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoveSoAppleUITests.swift; sourceTree = "<group>"; };
 		A6CA2FAA27F4C725009BF5E2 /* RoveSoAppleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoveSoAppleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A6E2F41B27F72DCC000987C7 /* Socket_Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket_Handler.swift; sourceTree = "<group>"; };
+		A6E2F41D27F73A69000987C7 /* Packet_Sender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packet_Sender.swift; sourceTree = "<group>"; };
 		A6ED19B227F4EE6C00933793 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AA2F719B296A6E26FB3145D0 /* Pods_RoveSoApple_RoveSoAppleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoveSoApple_RoveSoAppleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE1A6E4DDD598FAB2750DF1 /* Pods-RoveSoApple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoveSoApple.release.xcconfig"; path = "Target Support Files/Pods-RoveSoApple/Pods-RoveSoApple.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D4A04264D518729AC5EAB11 /* Pods_RoveSoApple.framework in Frameworks */,
+				A615B9BE2954398600333F17 /* Sliders in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,8 +141,21 @@
 				E79F163DEBED51AE78E9D24B /* Pods-RoveSoAppleTests.debug.xcconfig */,
 				6265CB480EE342272D4FDB6F /* Pods-RoveSoAppleTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A69BC4462954E18C00B63D28 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				A69BC4472954E1B800B63D28 /* Int16.swift */,
+				A69BC4512954E22D00B63D28 /* Color.swift */,
+				A69BC44F2954E21900B63D28 /* Data.swift */,
+				A69BC44B2954E1F400B63D28 /* Int32.swift */,
+				A69BC44D2954E20600B63D28 /* UInt32.swift */,
+				A69BC4492954E1D900B63D28 /* UInt16.swift */,
+				A69BC4552954F4E000B63D28 /* View.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 		A6C5C55D27F4D75500243DBB /* Views */ = {
@@ -131,6 +166,7 @@
 				A6C5C56227F4D80700243DBB /* EStopView.swift */,
 				A6C5C56427F4D81400243DBB /* AutonomyView.swift */,
 				A6C5C56627F4D82100243DBB /* SettingsView.swift */,
+				A69BC4532954E4CB00B63D28 /* DebugView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,11 +196,14 @@
 		A6CA2F8C27F4C721009BF5E2 /* RoveSoApple */ = {
 			isa = PBXGroup;
 			children = (
+				A69BC4462954E18C00B63D28 /* Extentions */,
 				A6C5C56A27F4DF1C00243DBB /* Info.plist */,
 				A6C5C55D27F4D75500243DBB /* Views */,
 				A6CA2F8D27F4C721009BF5E2 /* RoveSoAppleApp.swift */,
 				A6CA2F8F27F4C721009BF5E2 /* ContentView.swift */,
 				A6ED19B227F4EE6C00933793 /* Constants.swift */,
+				A6E2F41D27F73A69000987C7 /* Packet_Sender.swift */,
+				A6E2F41B27F72DCC000987C7 /* Socket_Handler.swift */,
 				A6CA2F9127F4C724009BF5E2 /* Assets.xcassets */,
 				A6CA2F9327F4C724009BF5E2 /* Preview Content */,
 			);
@@ -214,6 +253,9 @@
 			dependencies = (
 			);
 			name = RoveSoApple;
+			packageProductDependencies = (
+				A615B9BD2954398600333F17 /* Sliders */,
+			);
 			productName = RoveSoApple;
 			productReference = A6CA2F8A27F4C721009BF5E2 /* RoveSoApple.app */;
 			productType = "com.apple.product-type.application";
@@ -269,6 +311,7 @@
 				TargetAttributes = {
 					A6CA2F8927F4C721009BF5E2 = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1420;
 					};
 					A6CA2F9927F4C725009BF5E2 = {
 						CreatedOnToolsVersion = 13.3;
@@ -289,6 +332,9 @@
 				Base,
 			);
 			mainGroup = A6CA2F8127F4C721009BF5E2;
+			packageReferences = (
+				A615B9BC2954398600333F17 /* XCRemoteSwiftPackageReference "swiftui-sliders" */,
+			);
 			productRefGroup = A6CA2F8B27F4C721009BF5E2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -434,13 +480,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6E2F41E27F73A69000987C7 /* Packet_Sender.swift in Sources */,
+				A69BC4502954E21900B63D28 /* Data.swift in Sources */,
 				A6C5C56727F4D82100243DBB /* SettingsView.swift in Sources */,
 				A6CA2F9027F4C721009BF5E2 /* ContentView.swift in Sources */,
 				A6CA2F8E27F4C721009BF5E2 /* RoveSoAppleApp.swift in Sources */,
+				A69BC4522954E22D00B63D28 /* Color.swift in Sources */,
 				A6C5C56127F4D7D900243DBB /* DrivingView.swift in Sources */,
 				A6C5C56327F4D80700243DBB /* EStopView.swift in Sources */,
 				A6C5C56527F4D81400243DBB /* AutonomyView.swift in Sources */,
+				A69BC44C2954E1F400B63D28 /* Int32.swift in Sources */,
+				A69BC44E2954E20600B63D28 /* UInt32.swift in Sources */,
+				A6E2F41C27F72DCC000987C7 /* Socket_Handler.swift in Sources */,
+				A69BC4542954E4CB00B63D28 /* DebugView.swift in Sources */,
+				A69BC4482954E1B800B63D28 /* Int16.swift in Sources */,
+				A69BC4562954F4E000B63D28 /* View.swift in Sources */,
 				A6C5C55F27F4D7CB00243DBB /* LightingView.swift in Sources */,
+				A69BC44A2954E1D900B63D28 /* UInt16.swift in Sources */,
 				A6ED19B327F4EE6C00933793 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,15 +654,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"RoveSoApple/Preview Content\"";
-				DEVELOPMENT_TEAM = ACN9XCJST6;
+				DEVELOPMENT_TEAM = 9Y99F7S9M9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RoveSoApple/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RoveSoRemote;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Required to allow Rover Summon.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -615,11 +676,15 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ByrdnestStudios.RoveSoApple;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MarsRoverDesignTeam.RoveSoApple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -629,15 +694,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"RoveSoApple/Preview Content\"";
-				DEVELOPMENT_TEAM = ACN9XCJST6;
+				DEVELOPMENT_TEAM = 9Y99F7S9M9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RoveSoApple/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RoveSoRemote;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Required to allow Rover Summon.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -646,11 +716,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ByrdnestStudios.RoveSoApple;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MarsRoverDesignTeam.RoveSoApple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -774,6 +847,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A615B9BC2954398600333F17 /* XCRemoteSwiftPackageReference "swiftui-sliders" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spacenation/swiftui-sliders";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A615B9BD2954398600333F17 /* Sliders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A615B9BC2954398600333F17 /* XCRemoteSwiftPackageReference "swiftui-sliders" */;
+			productName = Sliders;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A6CA2F8227F4C721009BF5E2 /* Project object */;
 }
