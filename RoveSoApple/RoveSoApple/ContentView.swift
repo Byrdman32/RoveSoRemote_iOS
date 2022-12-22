@@ -9,29 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var drivePower: Int16 = defaultDrivePower
+    @State private var restartTime: UInt8 = defaultRestartTime
+    @State private var debugMode: Bool = false
+    @State private var debugIP: String = ""
+    
     var body: some View {
         TabView {
-            LightingView()
+            LightingView(debugMode: $debugMode, debugIP: $debugIP)
                 .tabItem {
                     Image(systemName: "lightbulb")
                     Text("Lighting")
                 }
-            DrivingView()
+            DrivingView(debugMode: $debugMode, debugIP: $debugIP, drivePower: $drivePower)
                 .tabItem {
                     Image(systemName: "bicycle")
                     Text("Driving")
                 }
-            EStopView()
+            EStopView(debugMode: $debugMode, debugIP: $debugIP, restartTime: $restartTime)
                 .tabItem {
                     Image(systemName: "square.fill")
                     Text("EStop")
                 }
-            AutonomyView()
+            AutonomyView(debugMode: $debugMode, debugIP: $debugIP)
                 .tabItem {
                     Image(systemName: "car.fill")
                     Text("Autonomy")
                 }
-            SettingsView()
+            SettingsView(debugMode: $debugMode, debugIP: $debugIP, drivePower: $drivePower, restartTime: $restartTime)
                 .tabItem {
                     Image(systemName: "gear")
                     Text("Settings")
