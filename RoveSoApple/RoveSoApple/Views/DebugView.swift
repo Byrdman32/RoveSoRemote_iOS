@@ -35,7 +35,6 @@ struct DebugView: View {
                 }
                 .padding(25)
                 Button("Tap to Exit") {
-                    print(debugIP)
                     dismiss()
                 }
                 .font(.title)
