@@ -10,7 +10,10 @@ import SwiftUI
 
 struct DrivingView: View {
     
+    @Binding var debugMode: Bool
+    @Binding var debugIP: String
     @Binding var drivePower: Int16
+    
     @State var left: Int16 = 0
     @State var right: Int16 = 0
     @State private var timer = Timer.publish(every: 1, on: .current, in: .common).autoconnect()
@@ -46,7 +49,7 @@ struct DrivingView: View {
                     Spacer()
                     
                     ValueSlider(value: $right, in: (drivePower * -1) ... drivePower, onEditingChanged: {_ in
-                        
+                        right = 0
                     })
                         .valueSliderStyle(
                             VerticalValueSliderStyle(
@@ -75,7 +78,7 @@ struct DrivingView: View {
                                                                 data_id: UInt16(1000),
                                                                 data_count: UInt16(2),
                                                                 data_type: UInt8(DataTypes.Int16.rawValue))
-                    sendUDP(ipAddresses[0], 11004, header, data)
+                    sendUDP(debugMode ? debugIP : RoverIP.Drive.rawValue, 11004, header, data)
                 }
             }
             .navigationTitle("Driving")

@@ -10,9 +10,13 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    @Binding var debugMode: Bool
+    @Binding var debugIP: String
     @Binding var drivePower: Int16
     @Binding var restartTime: UInt8
+    
     @State private var showingAlert = false
+    @State private var showingDebug = false
     
     @State var drive: Int = Int(defaultDrivePower)
     var driveProxy: Binding<Double>{
@@ -75,6 +79,13 @@ struct SettingsView: View {
                     Button("Cancel", role: .cancel) {
                         showingAlert = false
                     }
+                }
+                
+                Button("Debug") {
+                    showingDebug.toggle()
+                }
+                .sheet(isPresented: $showingDebug) {
+                    DebugView(debugMode: $debugMode, debugIP: $debugIP)
                 }
             }
         }

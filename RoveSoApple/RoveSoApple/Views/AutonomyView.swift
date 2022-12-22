@@ -11,18 +11,13 @@ import CoreLocationUI
 
 struct AutonomyView: View {
     
+    @Binding var debugMode: Bool
+    @Binding var debugIP: String
+    
     @State private var latitude: Double = 0
     @State private var longitude: Double = 0
     @State private var autonomyTimer = Timer.publish(every: 1, on: .current, in: .common).autoconnect()
-    @StateObject var locationManager = LocationManager()
-    @State var timeRemaining = 5
-//    let manager = CLLocationManager()
-    
-//    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-//         print("Failed to find user's location: \(error.localizedDescription)")
-//
-//         manager.stopUpdatingLocation()
-//    }
+    @State var timeRemaining = 2
     
     var body: some View {
         NavigationView {
@@ -41,7 +36,7 @@ struct AutonomyView: View {
                                                                     data_id: UInt16(11002),
                                                                     data_count: UInt16(2),
                                                                     data_type: UInt8(DataTypes.Double.rawValue))
-                        sendUDP(ipAddresses[0], 11009, header, data)
+                        sendUDP(debugMode ? debugIP : RoverIP.Autonomy.rawValue, 11009, header, data)
                     }
                     .frame(width: 280, height: 50)
                     .foregroundColor(.white)
@@ -54,7 +49,7 @@ struct AutonomyView: View {
                                                                     data_id: UInt16(11005),
                                                                     data_count: UInt16(1),
                                                                     data_type: UInt8(DataTypes.uInt8.rawValue))
-                        sendUDP(ipAddresses[0], 11009, header, [data])
+                        sendUDP(debugMode ? debugIP : RoverIP.Autonomy.rawValue, 11009, header, [data])
                     }
                     .frame(width: 280, height: 50)
                     .foregroundColor(.white)
@@ -69,7 +64,7 @@ struct AutonomyView: View {
                                                                     data_id: UInt16(11000),
                                                                     data_count: UInt16(1),
                                                                     data_type: UInt8(DataTypes.uInt8.rawValue))
-                        sendUDP(ipAddresses[0], 11009, header, [data])
+                        sendUDP(debugMode ? debugIP : RoverIP.Autonomy.rawValue, 11009, header, [data])
                     }
                     .frame(width: 280, height: 50)
                     .foregroundColor(.white)
@@ -82,7 +77,7 @@ struct AutonomyView: View {
                                                                     data_id: UInt16(11001),
                                                                     data_count: UInt16(1),
                                                                     data_type: UInt8(DataTypes.uInt8.rawValue))
-                        sendUDP(ipAddresses[0], 11009, header, [data])
+                        sendUDP(RoverIP.Autonomy.rawValue, 11009, header, [data])
                     }
                     .frame(width: 280, height: 50)
                     .foregroundColor(.white)
@@ -99,17 +94,22 @@ struct AutonomyView: View {
                 self.autonomyTimer.upstream.connect().cancel()
             }
             .onReceive(autonomyTimer) { _ in
+                let lm = CLLocationManager()
                 
                 if timeRemaining > 0 {
                     timeRemaining -= 1
                 } else if (timeRemaining == 0) {
-                    locationManager.requestLocation()
-                    timeRemaining -= 1
+                    
+                    lm.desiredAccuracy = kCLLocationAccuracyBest
+                    lm.requestWhenInUseAuthorization()
+                    lm.startUpdatingLocation()
+                    
+                    timeRemaining -= 1	
                 }
                 
-                if let location = locationManager.location {
-                    latitude = location.latitude
-                    longitude = location.longitude
+                if lm.location != nil {
+                    latitude = lm.location?.coordinate.latitude ?? 0.0
+                    longitude = lm.location?.coordinate.longitude ?? 0.0
                 }
             }
         }

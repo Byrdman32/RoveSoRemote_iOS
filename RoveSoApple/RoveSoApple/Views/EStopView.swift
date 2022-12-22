@@ -9,7 +9,10 @@ import SwiftUI
 
 struct EStopView: View {
     
+    @Binding var debugMode: Bool
+    @Binding var debugIP: String
     @Binding var restartTime: UInt8
+    
     @State var didPress: Bool = false
     @State var pressed: Bool = false
     
@@ -36,7 +39,7 @@ struct EStopView: View {
                                                             data_id: UInt16(2000),
                                                             data_count: UInt16(1),
                                                             data_type: UInt8(DataTypes.uInt8.rawValue))
-                sendUDP(ipAddresses[0], 11003, header, [data])
+                sendUDP(debugMode ? debugIP : RoverIP.BMS.rawValue, 11003, header, [data])
                 
                 withAnimation(.easeInOut(duration: 0.25)) {
                     pressed = true

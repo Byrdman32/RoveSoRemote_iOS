@@ -6,14 +6,22 @@
 //
 
 import Foundation
-// Settings View
+
 let maxDrivePower: Int16 = 1000
 let maxRestartTime: UInt8 = 20
 let defaultDrivePower: Int16 = 300
 let defaultRestartTime: UInt8 = 0
 let RoveComm_Version: UInt8 = 25
 
-let ipAddresses: [String] = ["218", "26"]
+let states = ["Teleop", "Autonomy", "Goal"]
+let patterns = ["MRDT", "Belgium", "Merica", "Dirt", "Dota", "MCD", "Windows"]
+
+enum RoverIP: String {
+    case Autonomy = "139"
+    case Drive = "134"
+    case Media = "140"
+    case BMS = "133"
+}
 
 enum DataTypes: Int {
     case Int8 = 0
@@ -32,72 +40,4 @@ struct RoveCommHeader {
     var data_id: UInt16
     var data_count: UInt16
     var data_type: UInt8
-}
-
-extension Int16 {
-    var twoBytes : [Int8] {
-        return [Int8(truncatingIfNeeded: self >> 8),
-                Int8(truncatingIfNeeded: self)]
-    }
-}
-
-extension UInt16 {
-    var twoBytes : [UInt8] {
-        return [UInt8(truncatingIfNeeded: self >> 8),
-                UInt8(truncatingIfNeeded: self)]
-    }
-}
-
-extension Int32 {
-    var fourBytes : [Int8] {
-        return [Int8(truncatingIfNeeded: self >> 24),
-                Int8(truncatingIfNeeded: self >> 16),
-                Int8(truncatingIfNeeded: self >> 8),
-                Int8(truncatingIfNeeded: self)]
-    }
-}
-
-extension UInt32 {
-    var fourBytes : [UInt8] {
-        return [UInt8(truncatingIfNeeded: self >> 24),
-                UInt8(truncatingIfNeeded: self >> 16),
-                UInt8(truncatingIfNeeded: self >> 8),
-                UInt8(truncatingIfNeeded: self)]
-    }
-}
-
-extension Data {
-
-    init<T>(from value: T) {
-        var value = value
-        var myData = Data()
-        withUnsafePointer(to:&value, { (ptr: UnsafePointer<T>) -> Void in
-            myData = Data( buffer: UnsafeBufferPointer(start: ptr, count: 1))
-        })
-        self.init(myData)
-    }
-
-    func toArray<T>(type: T.Type) -> [T] {
-        return self.withUnsafeBytes {
-            [T](UnsafeBufferPointer(start: $0, count: self.count/MemoryLayout<T>.stride))
-        }
-    }
-}
-
-import SwiftUI
-
-extension SwiftUI.Color {
-    func toRGB() -> [UInt8]? {
-        let uic = UIColor(self)
-        guard let components = uic.cgColor.components, components.count >= 3 else {
-            return nil
-        }
-        let r = Float(components[0]) * 255
-        let g = Float(components[1]) * 255
-        let b = Float(components[2]) * 255
-        
-        let colorData: [UInt8] = [UInt8(round(r)), UInt8(round(g)), UInt8(round(b))]
-        
-        return colorData
-    }
 }
