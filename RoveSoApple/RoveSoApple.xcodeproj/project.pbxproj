@@ -11,6 +11,7 @@
 		4F5416CB47177D89E9E15BCF /* Pods_RoveSoAppleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB9956F5975BCCD22072751 /* Pods_RoveSoAppleTests.framework */; };
 		7D4A04264D518729AC5EAB11 /* Pods_RoveSoApple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B90BF9F529647416BA6FFC2 /* Pods_RoveSoApple.framework */; };
 		A615B9BE2954398600333F17 /* Sliders in Frameworks */ = {isa = PBXBuildFile; productRef = A615B9BD2954398600333F17 /* Sliders */; };
+		A615B9C029545D6800333F17 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A615B9BF29545D6800333F17 /* LocationManager.swift */; };
 		A6C5C55F27F4D7CB00243DBB /* LightingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5C55E27F4D7CB00243DBB /* LightingView.swift */; };
 		A6C5C56127F4D7D900243DBB /* DrivingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5C56027F4D7D900243DBB /* DrivingView.swift */; };
 		A6C5C56327F4D80700243DBB /* EStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5C56227F4D80700243DBB /* EStopView.swift */; };
@@ -52,6 +53,7 @@
 		4694C58F88F9975D22635D8F /* Pods-RoveSoApple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoveSoApple.debug.xcconfig"; path = "Target Support Files/Pods-RoveSoApple/Pods-RoveSoApple.debug.xcconfig"; sourceTree = "<group>"; };
 		6265CB480EE342272D4FDB6F /* Pods-RoveSoAppleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoveSoAppleTests.release.xcconfig"; path = "Target Support Files/Pods-RoveSoAppleTests/Pods-RoveSoAppleTests.release.xcconfig"; sourceTree = "<group>"; };
 		6FB9956F5975BCCD22072751 /* Pods_RoveSoAppleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoveSoAppleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A615B9BF29545D6800333F17 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A6C5C55E27F4D7CB00243DBB /* LightingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightingView.swift; sourceTree = "<group>"; };
 		A6C5C56027F4D7D900243DBB /* DrivingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingView.swift; sourceTree = "<group>"; };
 		A6C5C56227F4D80700243DBB /* EStopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EStopView.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				A6E2F41B27F72DCC000987C7 /* Socket_Handler.swift */,
 				A6CA2F9127F4C724009BF5E2 /* Assets.xcassets */,
 				A6CA2F9327F4C724009BF5E2 /* Preview Content */,
+				A615B9BF29545D6800333F17 /* LocationManager.swift */,
 			);
 			path = RoveSoApple;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				A6E2F41E27F73A69000987C7 /* Packet_Sender.swift in Sources */,
 				A6C5C56727F4D82100243DBB /* SettingsView.swift in Sources */,
 				A6CA2F9027F4C721009BF5E2 /* ContentView.swift in Sources */,
+				A615B9C029545D6800333F17 /* LocationManager.swift in Sources */,
 				A6CA2F8E27F4C721009BF5E2 /* RoveSoAppleApp.swift in Sources */,
 				A6C5C56127F4D7D900243DBB /* DrivingView.swift in Sources */,
 				A6C5C56327F4D80700243DBB /* EStopView.swift in Sources */,

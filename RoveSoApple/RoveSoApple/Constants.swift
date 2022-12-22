@@ -92,27 +92,12 @@ extension SwiftUI.Color {
         guard let components = uic.cgColor.components, components.count >= 3 else {
             return nil
         }
-        var r = Float(components[0]) * 255
-        var g = Float(components[1]) * 255
-        var b = Float(components[2]) * 255
-        var a = Float(1.0)
+        let r = Float(components[0]) * 255
+        let g = Float(components[1]) * 255
+        let b = Float(components[2]) * 255
         
         let colorData: [UInt8] = [UInt8(round(r)), UInt8(round(g)), UInt8(round(b))]
-
-        if components.count >= 4 {
-            a = Float(components[3])
-        }
         
         return colorData
-    }
-}
-
-extension Double {
-    func toInt16() -> Int16? {
-        if self >= Double(Int16.min) && self < Double(Int16.max) {
-            return Int16(self)
-        } else {
-            return 0
-        }
     }
 }
