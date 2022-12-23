@@ -39,7 +39,8 @@ struct EStopView: View {
                                                             data_id: UInt16(2000),
                                                             data_count: UInt16(1),
                                                             data_type: UInt8(DataTypes.uInt8.rawValue))
-                sendUDP(debugMode ? debugIP : RoverIP.BMS.rawValue, 11003, header, [data])
+                sendUDP(debugMode ? debugIP : RoverIP.BMS.rawValue,
+                        RoverPort.BMS.rawValue, header, [data])
                 
                 withAnimation(.easeInOut(duration: 0.25)) {
                     pressed = true

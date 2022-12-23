@@ -378,7 +378,23 @@ func sendUDP(_ host: String, _ port: Int, _ header: RoveCommHeader, _ data: [Dou
     packet.append(header.data_count.twoBytes[1])
     packet.append(Data([header.data_type]))
     
-//    for i in data {
+//    let tempData = toByteArray(Double (-1745.154)).reversed()
+//    let tempData2 = toByteArray(Double (-76865.454)).reversed()
+    
+//    for i in tempData {
+//        packet.append(i)
+//    }
+//    for i in tempData2 {
+//        packet.append(i)
+//    }
+    for i in data {
+        
+        let temp = toByteArray(Double (i)).reversed()
+        
+        for j in temp {
+            packet.append(j)
+        }
+    }
 //        packet.append(Data(from: i.fourBytes[0]))
 //        packet.append(Data(from: i.fourBytes[1]))
 //        packet.append(Data(from: i.fourBytes[2]))
