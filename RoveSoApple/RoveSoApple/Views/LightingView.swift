@@ -46,7 +46,8 @@ struct LightingView: View {
                                                                     data_id: UInt16(7002),
                                                                     data_count: UInt16(1),
                                                                     data_type: UInt8(DataTypes.uInt8.rawValue))
-                        sendUDP(debugMode ? debugIP : RoverIP.Media.rawValue, 11010, header, [data])
+                        sendUDP(debugMode ? debugIP : RoverIP.Media.rawValue,
+                                RoverPort.Media.rawValue, header, [data])
                     }
                     .buttonStyle(.bordered)
                     .padding(50)
@@ -68,7 +69,8 @@ struct LightingView: View {
                                                                     data_id: UInt16(7000),
                                                                     data_count: UInt16(3),
                                                                     data_type: UInt8(DataTypes.uInt8.rawValue))
-                        sendUDP(debugMode ? debugIP : RoverIP.Media.rawValue, 11000, header, data)
+                        sendUDP(debugMode ? debugIP : RoverIP.Media.rawValue,
+                                RoverPort.Media.rawValue, header, data)
                     }
                     .buttonStyle(.bordered)
                     .padding(50)
@@ -111,7 +113,8 @@ struct LightingView: View {
                                                                     data_count: UInt16(1),
                                                                     data_type: UInt8(DataTypes.uInt8.rawValue))
                         
-                        sendUDP(debugMode ? debugIP : RoverIP.Media.rawValue, 11000, header, [data])
+                        sendUDP(debugMode ? debugIP : RoverIP.Media.rawValue,
+                                RoverPort.Media.rawValue, header, [data])
                     }
                     .buttonStyle(.bordered)
                     .padding(50)
