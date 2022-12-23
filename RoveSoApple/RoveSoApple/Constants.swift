@@ -23,6 +23,13 @@ enum RoverIP: String {
     case BMS = "133"
 }
 
+enum RoverPort: Int {
+    case Autonomy = 11009
+    case Drive = 11004
+    case Media = 11010
+    case BMS = 11003
+}
+
 enum DataTypes: Int {
     case Int8 = 0
     case uInt8 = 1

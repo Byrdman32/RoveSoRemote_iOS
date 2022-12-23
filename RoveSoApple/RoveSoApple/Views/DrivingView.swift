@@ -78,7 +78,8 @@ struct DrivingView: View {
                                                                 data_id: UInt16(1000),
                                                                 data_count: UInt16(2),
                                                                 data_type: UInt8(DataTypes.Int16.rawValue))
-                    sendUDP(debugMode ? debugIP : RoverIP.Drive.rawValue, 11004, header, data)
+                    sendUDP(debugMode ? debugIP : RoverIP.Drive.rawValue,
+                            RoverPort.Drive.rawValue, header, data)
                 }
             }
             .navigationTitle("Driving")

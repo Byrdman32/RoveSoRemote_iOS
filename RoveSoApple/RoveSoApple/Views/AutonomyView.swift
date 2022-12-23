@@ -36,7 +36,8 @@ struct AutonomyView: View {
                                                                     data_id: UInt16(11002),
                                                                     data_count: UInt16(2),
                                                                     data_type: UInt8(DataTypes.Double.rawValue))
-                        sendUDP(debugMode ? debugIP : RoverIP.Autonomy.rawValue, 11009, header, data)
+                        sendUDP(debugMode ? debugIP : RoverIP.Autonomy.rawValue,
+                                RoverPort.Autonomy.rawValue, header, data)
                     }
                     .frame(width: 280, height: 50)
                     .foregroundColor(.white)
@@ -49,7 +50,8 @@ struct AutonomyView: View {
                                                                     data_id: UInt16(11005),
                                                                     data_count: UInt16(1),
                                                                     data_type: UInt8(DataTypes.uInt8.rawValue))
-                        sendUDP(debugMode ? debugIP : RoverIP.Autonomy.rawValue, 11009, header, [data])
+                        sendUDP(debugMode ? debugIP : RoverIP.Autonomy.rawValue,
+                                RoverPort.Autonomy.rawValue, header, [data])
                     }
                     .frame(width: 280, height: 50)
                     .foregroundColor(.white)
@@ -64,7 +66,8 @@ struct AutonomyView: View {
                                                                     data_id: UInt16(11000),
                                                                     data_count: UInt16(1),
                                                                     data_type: UInt8(DataTypes.uInt8.rawValue))
-                        sendUDP(debugMode ? debugIP : RoverIP.Autonomy.rawValue, 11009, header, [data])
+                        sendUDP(debugMode ? debugIP : RoverIP.Autonomy.rawValue,
+                                RoverPort.Autonomy.rawValue, header, [data])
                     }
                     .frame(width: 280, height: 50)
                     .foregroundColor(.white)
@@ -77,7 +80,8 @@ struct AutonomyView: View {
                                                                     data_id: UInt16(11001),
                                                                     data_count: UInt16(1),
                                                                     data_type: UInt8(DataTypes.uInt8.rawValue))
-                        sendUDP(RoverIP.Autonomy.rawValue, 11009, header, [data])
+                        sendUDP(debugMode ? debugIP : RoverIP.Autonomy.rawValue,
+                                RoverPort.Autonomy.rawValue, header, [data])
                     }
                     .frame(width: 280, height: 50)
                     .foregroundColor(.white)
